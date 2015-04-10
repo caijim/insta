@@ -9,6 +9,7 @@
 import UIKit
 
 class PhotoDetailsViewController: UIViewController {
+    var selectedPhoto: NSDictionary!
 
     override func viewDidLoad() {
         super.viewDidLoad()
