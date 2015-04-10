@@ -41,7 +41,14 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         var profilePicture = UIImageView(frame: CGRect(x: 8 , y: 8, width: profileWidthHeight, height: profileWidthHeight))
             //profilePicture.backgroundColor = UIColor.redColor()
-        profilePicture.setImageWithURL(photos[section].valueForKeyPath("user."))
+
+//        var url = photo.valueForKeyPath("images.standard_resolution.url") as? String
+
+        var url = photos[section].valueForKeyPath("user.profile_picture") as? String
+//        profilePicture.photoView.setImageWithURL(NSURL(string: url!)!)
+        profilePicture.setImageWithURL(NSURL(string: url!)!)
+
+//        profilePicture.setImageWithURL(NSURL(string: url!)!)
         headerView.insertSubview(profilePicture, atIndex: 0)
         return headerView
         
